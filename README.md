@@ -1,4 +1,4 @@
-## Group XYX Airline Booking App
+## Group XYZ Airline Booking App
 
 Github repository for version control
 
