@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+	    <meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <title>Airline Booking App</title>
+	    <link rel="stylesheet" type="text/css" href="../assets/main.css">
+	    <link rel="stylesheet" type="text/css" href="../assets/book-page.css">
+	    <script src="https://code.jquery.com/jquery-3.6.4.slim.min.js" integrity="sha256-a2yjHM4jnF9f54xUQakjZGaqYs/V1CYvWpoqZzC2/Bw=" crossorigin="anonymous"></script>
+	    <script src="../assets/book-page.js"></script>
+    </head>
+    <body>
+	    <div id="top-bar">
+            <h1 class="logo-txt">FlyDreamAir</h1>
+	    </div>
+		<div id="book-widget">
+			<h1 class="center-txt">Pick Route</h1>
+			<div class="select-container center-txt">
+				<label for="menu">Select a Departure:</label>
+				<select id="dep-select">
+				</select>
+			</div>
+			<div class="select-container center-txt">
+				<label for="menu">Select an Arrival:</label>
+				<select id="arr-select">
+				</select>
+			</div>
+			<div id="select-seat-btn-container">
+				<a class="txt-btn" id="select-seat-btn" onclick="selectSeat()">Select Seat</a>
+			</div>
+		</div>
+    </body>
+</html>

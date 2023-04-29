@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+	    <meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <title>Airline Booking App</title>
+	    <link rel="stylesheet" type="text/css" href="../assets/main.css">
+	    <link rel="stylesheet" type="text/css" href="../assets/seat-page.css">
+	    <script src="https://code.jquery.com/jquery-3.6.4.slim.min.js" integrity="sha256-a2yjHM4jnF9f54xUQakjZGaqYs/V1CYvWpoqZzC2/Bw=" crossorigin="anonymous"></script>
+	    <script src="../assets/seat-page.js"></script>
+    </head>
+    <body>
+	    <div id="top-bar">
+            <h1 class="logo-txt">FlyDreamAir</h1>
+	    </div>
+		<div id="bottom-bar">
+            <a class="txt-btn" id="book-btn" onclick="bookButton()">Book</a>
+	    </div>
+		<div id="seat-selector">
+			<div id="seat-legend">
+				<div class="seat-legend-item">
+					<img class="seat-legend-icon" src="../assets/img/seats/selected.png">
+					<p class="seat-legend-txt">Selected</p>
+				</div>
+				<div class="seat-legend-item">
+					<img class="seat-legend-icon" src="../assets/img/seats/sold.png">
+					<p class="seat-legend-txt">Sold</p>
+				</div>
+				<div class="seat-legend-item">
+					<img class="seat-legend-icon" src="../assets/img/seats/unavailable.png">
+					<p class="seat-legend-txt">Unavailable</p>
+				</div>
+				<div class="seat-legend-item">
+					<img class="seat-legend-icon" src="../assets/img/seats/available.png">
+					<p class="seat-legend-txt">Available</p>
+				</div>
+			</div>
+			<div id="row-headers">
+				<div class="row-header-item">
+					<h1 class="row-header-txt">A</h1>
+				</div>
+				<div class="row-header-item header-rm">
+					<h1 class="row-header-txt">B</h1>
+				</div>
+				<div class="row-header-item header-lm">
+					<h1 class="row-header-txt">C</h1>
+				</div>
+				<div class="row-header-item">
+					<h1 class="row-header-txt">D</h1>
+				</div>
+				<div class="row-header-item header-rm">
+					<h1 class="row-header-txt">E</h1>
+				</div>
+				<div class="row-header-item header-lm">
+					<h1 class="row-header-txt">F</h1>
+				</div>
+				<div class="row-header-item">
+					<h1 class="row-header-txt">G</h1>
+				</div>
+			</div>
+			<div id="seat-rows">
+			</div>
+			<div id="seat-cursor">
+				<h1 id="seat-cursor-txt">1A</h1>
+			</div>
+		</div>
+    </body>
+</html>

@@ -1,0 +1,41 @@
+body {
+    background-color: rgb(31, 31, 31);
+    margin: 0;
+    padding: 0;
+}
+
+
+.txt-btn {
+    border-radius: 10px;
+    background-color: rgb(53,100,228);
+    padding: 8px;
+    cursor: pointer;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 20px;
+}
+
+
+h1, h2, h3, p, a, label {
+    color: rgb(255,255,255);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+}
+
+.center-txt{
+    text-align: center;
+}
+
+
+#top-bar {
+    position: absolute;
+    height: 80px;
+    background-color: rgb(54, 54, 54);
+    width: 100%;
+}
+
+.logo-txt {
+    margin: 0px;
+    margin-left: 20px;
+    margin-top: 14px
+}

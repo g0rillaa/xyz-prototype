@@ -1,0 +1,39 @@
+#top {
+    position: relative;
+    height: 100vh;
+    justify-content: center;
+}
+
+#cover-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.cover-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+}
+
+.logo-txt {
+    position: absolute;
+    top: 10px;
+    left: 30px;
+}
+
+
+@media (max-width: 430px) {
+    .logo-txt {
+        left: 10px;
+    }
+    h1 {
+        font-size: 30px;
+    }
+    a {
+        font-size: 15px;
+    }
+}

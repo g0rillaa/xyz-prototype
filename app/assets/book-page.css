@@ -1,0 +1,41 @@
+#book-widget {
+    background-color: rgb(54, 54, 54);
+    height: 700px;
+    width: 500px;
+    position: absolute;
+    top: 120px;
+    left: calc(50% - 250px);
+    border-radius: 20px;
+    text-align: center;
+}
+
+.select-container {
+    margin: 10px;
+}
+select {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: rgb(31, 31, 31);
+    color: white;
+    width: 200px;
+}
+
+#select-seat-btn-container {
+    margin-top: 200px;
+}
+
+
+@media (max-width: 540px) {
+    #book-widget {
+        width: 400px;
+        left: calc(50% - 200px);
+        height: 600px;
+    }
+}
+
+@media (max-width: 420px) {
+    #book-widget {
+        width: 300px;
+        left: calc(50% - 150px);
+        height: 500px;
+    }
+}
