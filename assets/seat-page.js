@@ -1,4 +1,4 @@
-var rows = 10
+var rows = 20
 var columnMap = ['A', 'B', 'C', 'D', 'E', 'F', 'G']
 var seatWeights = ['available', 'available', 'available', 'available', 'available', 'sold', 'sold', 'sold', 'unavailable']
 
@@ -37,6 +37,9 @@ function insertSeats(){
             }
             if(seatNum==2 || seatNum ==5){
                 classDec = 'seat-icon seat-lm'
+            }
+            if(rowNum == 10){
+                classDec += ' seat-gap'
             }
             row.append($('<img>', {
                 class: classDec,
@@ -125,5 +128,12 @@ function bookButton(){
             selected.push(`${Number(seatTxt[1])+1}${columnMap[seatTxt[2]]}`)
         }
     })
-    alert(`Booked the following seat(s): ${selected}`)
+    if(selected.length == 0){
+        alert(`Please select at least one seat.`)
+    } else {
+        alert(`Selected the following seat(s): ${selected}`)
+        window.location.href = `../payment?amt=${selected.length*300}`;
+    }
+    console.log(selected.length)
+    
 }

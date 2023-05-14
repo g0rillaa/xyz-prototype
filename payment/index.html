@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+	    <meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <title>Airline Booking App</title>
+	    <link rel="stylesheet" type="text/css" href="../assets/main.css">
+	    <link rel="stylesheet" type="text/css" href="../assets/payment-page.css">
+	    <script src="https://code.jquery.com/jquery-3.6.4.slim.min.js" integrity="sha256-a2yjHM4jnF9f54xUQakjZGaqYs/V1CYvWpoqZzC2/Bw=" crossorigin="anonymous"></script>
+	    <script src="../assets/payment-page.js"></script>
+    </head>
+    <body>
+	    <div id="top-bar">
+            <h1 class="logo-txt">FlyDreamAir</h1>
+	    </div>
+		<div id="container">
+			<p id="cost">Amount Due: </p>
+			<div id="paypal">
+				<button id="paypal-btn" onclick="paypal()">Paypal</button>
+			</div>
+			<p>Or</p>
+			<form id="payment-form">
+			  <div class="form-group">
+				<label for="card-number">Card Number</label>
+				<input type="text" id="card-number" placeholder="Enter card number" required>
+			  </div>
+			  <div class="form-group">
+				<label for="expiry-date">Expiry Date</label>
+				<input type="text" id="expiry-date" placeholder="MM/YY" required>
+			  </div>
+			  <div class="form-group">
+				<label for="cvv">CVV</label>
+				<input type="text" id="cvv" placeholder="CVV" required>
+			  </div>
+			  <div class="form-group">
+				<label for="cardholder-name">Cardholder Name</label>
+				<input type="text" id="cardholder-name" placeholder="Enter cardholder name" required>
+			  </div>
+			  <button type="submit" id="submit-btn">Submit Payment</button>
+			</form>
+		  </div>
+    </body>
+</html>

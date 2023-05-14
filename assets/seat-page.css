@@ -42,7 +42,7 @@
 }
 
 .seat-icon {
-    width: 80px;
+    width: 60px;
     margin: 5px;
 }
 
@@ -54,11 +54,15 @@
     margin-left: 30px;
 }
 
+.seat-gap {
+    margin-top: 80px;
+}
+
 #row-headers {
     display: inline-flex;
 }
 .row-header-item {
-    width: 80px;
+    width: 60px;
     margin: 5px;
 }
 
