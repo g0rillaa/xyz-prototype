@@ -102,8 +102,8 @@ function updateCursor(){
 }
 
 function seatClick(){
-    if(hoveredSeat == ""){return console.log('g')}
-    var elm = $(`#${hoveredSeat}`)
+    if(hoveredSeat !== ""){
+        var elm = $(`#${hoveredSeat}`)
     var id = elm.attr('src')
     if(id.includes('available') && !id.includes('unavailable')){
         return elm.attr('src', `../assets/img/seats/selected.png`)
@@ -116,6 +116,7 @@ function seatClick(){
     }
     if(id.includes('selected')){
         return elm.attr('src', `../assets/img/seats/available.png`)
+    }
     }
 }
 

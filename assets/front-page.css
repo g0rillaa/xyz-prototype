@@ -92,7 +92,7 @@
 #locationsContainer {
     background-color: #0a233b;
     color: white;
-    height: 100vh;
+    height: 70vh;
     padding: 1em;
 }
 
@@ -104,6 +104,7 @@
 }
 
 #locations h2 {
+    margin-top: 80px;
     width: 100%;
     text-align: center;
     margin-bottom: 1em;
@@ -126,6 +127,12 @@
     font-size: 30px;
 }
 
+#secondBookBtnContainer {
+    margin-top: 100px;
+    text-align: center;
+    width: 100%;
+}
+
 @media (max-width: 1000px) {
     .location {
         width: 45%;
@@ -134,6 +141,9 @@
     .location img {
         width: 70%;
         height: auto;
+    }
+    #locationsContainer {
+        height: 100vh;
     }
 }
 
@@ -153,11 +163,14 @@
         width: 65%;
         height: auto;
     }
+    #secondBookBtnContainer {
+        margin-top: 20px;
+    }
+    #locationsContainer {
+        height: 125vh;
+    }
 }
-#secondBookBtnContainer {
-    text-align: center;
-    width: 100%;
-}
+
 
 footer {
     background-color: #0a121f;
