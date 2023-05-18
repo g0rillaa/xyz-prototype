@@ -8,7 +8,7 @@ $(document).ready(function() {
 
 var seatBoundingBoxes = []
 var mousePos = {x: 0, y: 0}
-var hoveredSeat = ""
+var hoveredSeat = "1A"
 $(document).mousemove(function(event) {
     mousePos = {x: event.pageX, y: event.pageY}
     var windowY = mousePos.y - $(window).scrollTop();
@@ -102,6 +102,7 @@ function updateCursor(){
 }
 
 function seatClick(){
+    if(hoveredSeat == ""){return console.log('g')}
     var elm = $(`#${hoveredSeat}`)
     var id = elm.attr('src')
     if(id.includes('available') && !id.includes('unavailable')){
