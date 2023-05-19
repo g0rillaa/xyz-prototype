@@ -105,6 +105,9 @@ function seatClick(){
     if(hoveredSeat !== ""){
         var elm = $(`#${hoveredSeat}`)
     var id = elm.attr('src')
+    if(id == null){
+        window.location.reload()
+    }
     if(id.includes('available') && !id.includes('unavailable')){
         return elm.attr('src', `../assets/img/seats/selected.png`)
     }
