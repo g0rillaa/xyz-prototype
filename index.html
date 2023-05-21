@@ -13,7 +13,9 @@
 	    <div id="top">
 		    <img id="cover-image" src="./assets/img/main-page.jpg">
             <h1 class="logo-txt">FlyDreamAir</h1>
+			<a class="txt-btn" id="login-btn" onclick="loginDialog()">Login</a>
 		    <div class="cover-text">
+				<h2 id="welcome">Welcome</h2>
 		        <h1>Soar For Less</h1>
 		        <a class="txt-btn" onclick="bookFlight()">Book a Flight</a>
 		    </div>
@@ -62,5 +64,16 @@
             <p>USA: 123 Smooth Rd, San Francisco, CA</p>
             <p>UK: 123 The Lane, London</p>
         </footer>
+		<div id="login-dialog">
+			<div id="login-dialog-fields">
+				<p>Login/Register</p>
+				<input id="usr" type="text" placeholder="username" id="username-input" class="input-field">
+				<input id="pwd" type="password" placeholder="password" id="password-input" class="input-field">
+			</div>
+			<div id="login-dialog-btns">
+				<a class="txt-btn login-btn" onclick="login()">Login</a>
+				<a class="txt-btn login-btn" onclick="register()">Register</a>
+			</div>
+		</div>
     </body>
 </html>

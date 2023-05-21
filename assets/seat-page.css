@@ -13,8 +13,12 @@
     width: 100px;
 }
 
-#seat-selector {
+#total-price {
     padding-top: 120px;
+    text-align: center;
+}
+
+#seat-selector {
     text-align: center;
 }
 

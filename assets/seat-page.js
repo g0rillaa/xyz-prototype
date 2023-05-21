@@ -6,6 +6,7 @@ $(document).ready(function() {
     insertSeats()
 });
 
+var currentPrice = 0
 var seatBoundingBoxes = []
 var mousePos = {x: 0, y: 0}
 var hoveredSeat = "1A"
@@ -104,22 +105,26 @@ function updateCursor(){
 function seatClick(){
     if(hoveredSeat !== ""){
         var elm = $(`#${hoveredSeat}`)
-    var id = elm.attr('src')
-    if(id == null){
-        window.location.reload()
-    }
-    if(id.includes('available') && !id.includes('unavailable')){
-        return elm.attr('src', `../assets/img/seats/selected.png`)
-    }
-    if(id.includes('unavailable')){
-        return alert('Sorry, the selected seat is unavailable.')
-    }
-    if(id.includes('sold')){
-       return alert('Sorry, the selected seat has already been sold.')
-    }
-    if(id.includes('selected')){
-        return elm.attr('src', `../assets/img/seats/available.png`)
-    }
+        var id = elm.attr('src')
+        if(id == null){
+            window.location.reload()
+        }
+        if(id.includes('available') && !id.includes('unavailable')){
+            currentPrice = currentPrice + 300
+            $('#total-price').text(`Total Price: $${currentPrice}`)
+            return elm.attr('src', `../assets/img/seats/selected.png`)
+        }
+        if(id.includes('unavailable')){
+            return alert('Sorry, the selected seat is unavailable.')
+        }
+        if(id.includes('sold')){
+            return alert('Sorry, the selected seat has already been sold.')
+        }
+        if(id.includes('selected')){
+            currentPrice = currentPrice - 300
+            $('#total-price').text(`Total Price: $${currentPrice}`)
+            return elm.attr('src', `../assets/img/seats/available.png`)
+        }
     }
 }
 
