@@ -59,3 +59,7 @@ function readCookie(name) {
     }
     return null;
 }
+
+function home(){
+    window.location.href = `../`;
+}

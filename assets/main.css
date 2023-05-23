@@ -37,5 +37,6 @@ h1, h2, h3, p, a, label, li {
 .logo-txt {
     margin: 0px;
     margin-left: 20px;
-    margin-top: 14px
+    margin-top: 14px;
+    cursor: pointer;
 }

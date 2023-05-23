@@ -145,3 +145,7 @@ function writeCookie(name, value, days) {
     }
     document.cookie = name + "=" + value + expires + "; path=/";
 }
+
+function home(){
+    window.location.href = `../`;
+}
