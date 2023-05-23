@@ -142,8 +142,17 @@ function bookButton(){
         alert(`Please select at least one seat.`)
     } else {
         alert(`Selected the following seat(s): ${selected}`)
-        window.location.href = `../payment?amt=${selected.length*300}`;
+        window.location.href = `../extras?route=${getParameterByName('route')}&amt=${selected.length*300}&seats=${selected.length}`;
     }
     console.log(selected.length)
-    
+}
+
+function getParameterByName(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+      results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
 }

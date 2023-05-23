@@ -14,6 +14,7 @@
 		    <img id="cover-image" src="./assets/img/main-page.jpg">
             <h1 class="logo-txt">FlyDreamAir</h1>
 			<a class="txt-btn" id="login-btn" onclick="loginDialog()">Login</a>
+			<a class="txt-btn" id="bookings-btn" onclick="bookingsDialog()">Manage Bookings</a>
 		    <div class="cover-text">
 				<h2 id="welcome">Welcome</h2>
 		        <h1>Soar For Less</h1>
@@ -73,6 +74,16 @@
 			<div id="login-dialog-btns">
 				<a class="txt-btn login-btn" onclick="login()">Login</a>
 				<a class="txt-btn login-btn" onclick="register()">Register</a>
+			</div>
+		</div>
+		<div id="bookings-dialog">
+			<p id="bookings-dialog-close" onclick="closeBookings()">x</p>
+			<div id="bookings-dialog-container">
+				<p id="booking-item-1"></p>
+				<p id="booking-item-2"></p>
+				<p id="booking-item-3"></p>
+				<p id="booking-item-4"></p>
+				<p id="booking-item-5"></p>
 			</div>
 		</div>
     </body>

@@ -8,6 +8,18 @@ $(document).ready(function() {
         session = name
         $('#login-btn').text('Logout')
     }
+
+    var pastBooking = readCookie('past-booking')
+    if(pastBooking !== null && pastBooking !== ""){
+        var doc = JSON.parse(pastBooking)
+        $('#booking-item-1').text(`Previous Booking`)
+        $('#booking-item-2').text(`ID: ${doc.id}`)
+        $('#booking-item-3').text(`Route: ${doc.route}`)
+        $('#booking-item-4').text(`Amount: $${doc.amt}`)
+        $('#booking-item-5').text(`Seats: ${doc.seats}`)
+    } else {
+        $('#booking-item-1').text(`No previous bookings.`)
+    }
 });
 
 
@@ -33,7 +45,6 @@ function loginDialog(){
         writeCookie("session", "", 30)
         window.location.reload()
     }
-    
 }
 
 function closeLoginDialog(){
@@ -100,6 +111,14 @@ function register(){
     $('#login-btn').text('Logout')
 }
 
+
+function bookingsDialog(){
+    if(session == ""){ return alert("Please login to manage your bookings.") }
+    $('#bookings-dialog').css('top', 'calc(50% - 300px)')
+}
+function closeBookings(){
+    $('#bookings-dialog').css('top', '-1000px')
+}
 
 function readCookie(name) {
     var nameEQ = name + "=";

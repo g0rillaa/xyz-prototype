@@ -40,5 +40,22 @@ function updateLocations(){
 
 
 function selectSeat(){
-    window.location.href = "../selectseat";
+    var session = readCookie("session")
+    if(session == null || session == ""){ return alert("Please create an account on the home page to continue.") }
+    window.location.href = `../selectseat?route=${$('#dep-select').val()}-${$('#arr-select').val()}`;
+}
+
+function readCookie(name) {
+    var nameEQ = name + "=";
+    var cookies = document.cookie.split(';');
+    for (var i = 0; i < cookies.length; i++) {
+        var cookie = cookies[i];
+        while (cookie.charAt(0) == ' ') {
+            cookie = cookie.substring(1, cookie.length);
+        }
+        if (cookie.indexOf(nameEQ) === 0) {
+            return cookie.substring(nameEQ.length, cookie.length);
+        }
+    }
+    return null;
 }

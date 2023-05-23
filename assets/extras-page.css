@@ -1,0 +1,50 @@
+.box {
+    padding: 20px;
+    padding-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .section {
+    padding-bottom: 20px;
+    border: 2px solid rgb(54, 55, 70);
+    border-radius: 10px;
+    width: 300px;
+  }
+  
+  .item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+  }
+  
+  .item img {
+    height: 100px;
+    margin-right: 10px;
+  }
+
+  .item span {
+    color: white;
+  }
+
+
+#redirect-btn {
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+
+#currentPriceContainer {
+    position: fixed;
+    top: 100px;
+    left: -10px;
+    border: 2px solid rgb(54, 55, 70);
+    background-color: rgb(43, 43, 43);
+    border-radius: 10px;
+    width: 100px;
+    text-align: center;
+}
